@@ -21,17 +21,18 @@ module.exports = {
 			//{ test: /\.js$/, exclude: /node_modules/, loader: 'jshint-loader' }
 		],
 		loaders: [
-			{ 
-				test: /\.js?$/, 
-				loaders: ['react-hot', 'babel'], 
-				exclude: /node_modules/ 
+			{
+				test: /\.js?$/,
+				loaders: ['react-hot', 'babel'],
+				exclude: /node_modules/
 			},
-			{ 
-				test: /\.js$/, 
-				exclude: /node_modules/, 
-				loader: 'babel-loader'
+			{
+				test: /\.jsx$/,
+				exclude: /node_modules/,
+				loader: 'babel-loader',
+				
 			},
-			{ 
+			{
 				test: /\.scss$/, 
 				loader: ExtractTextPlugin.extract('css!autoprefixer-loader!sass') 
 			},
